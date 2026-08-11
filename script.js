@@ -1,28 +1,37 @@
-const form = document.getElementById("form");
+document.addEventListener("DOMContentLoaded", function () {
 
-form?.addEventListener("submit", function (e) {
-  e.preventDefault();
+  const form = document.getElementById("form");
 
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const service = document.getElementById("service").value;
-  const location = document.getElementById("location").value.trim();
-  const details = document.getElementById("details").value.trim();
+  if (!form) return;
 
-  const message =
-`Hello Royal Construction International,
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-I would like a quotation.
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+    const location = document.getElementById("location").value.trim();
+    const details = document.getElementById("details").value.trim();
 
-Name: ${name}
-Phone: ${phone}
-Service: ${service}
-Location: ${location}
-Project details: ${details}`;
+    if (!name || !phone || !details) {
+      alert("Please enter your name, phone number and project details.");
+      return;
+    }
 
-  const whatsappURL =
-    "https://wa.me/263714935110?text=" +
-    encodeURIComponent(message);
+    const message =
+      "Hello Royal Construction International,\n\n" +
+      "I would like a quotation.\n\n" +
+      "Name: " + name + "\n" +
+      "Phone: " + phone + "\n" +
+      "Service: " + service + "\n" +
+      "Location: " + location + "\n" +
+      "Project details: " + details;
 
-  window.open(whatsappURL, "_blank");
+    const whatsappURL =
+      "https://wa.me/263714935110?text=" +
+      encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+  });
+
 });
