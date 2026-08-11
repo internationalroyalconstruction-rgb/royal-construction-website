@@ -6,11 +6,13 @@
 
 <title>Royal Construction International | Zimbabwe</title>
 
-<meta name="description" content="Royal Construction International - Building construction, plumbing, roofing, tiling, painting, renovations and house plans in Zimbabwe.">
+<meta name="description" content="Royal Construction International - professional construction, plumbing, roofing, tiling, painting, renovations and house plans in Zimbabwe.">
 
 <style>
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
@@ -18,7 +20,6 @@ html{
 }
 
 body{
-  margin:0;
   font-family:Arial,Helvetica,sans-serif;
   color:#142336;
   background:#fff;
@@ -28,6 +29,11 @@ body{
 a{
   text-decoration:none;
   color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
 }
 
 .wrap{
@@ -42,8 +48,8 @@ header{
   top:0;
   width:100%;
   background:#06192d;
-  color:white;
-  box-shadow:0 5px 22px #0004;
+  color:#fff;
+  box-shadow:0 5px 22px rgba(0,0,0,.25);
 }
 
 .nav{
@@ -60,8 +66,8 @@ header{
 }
 
 .mark{
-  width:40px;
-  height:40px;
+  width:42px;
+  height:42px;
   border:2px solid #d6aa4f;
   display:grid;
   place-items:center;
@@ -103,33 +109,23 @@ nav a:hover{
   background:none;
   border:0;
   color:#fff;
-  font-size:27px;
+  font-size:28px;
+  cursor:pointer;
 }
 
 /* HERO */
 .hero{
   padding-top:72px;
-  min-height:730px;
+  min-height:720px;
   display:flex;
   align-items:center;
   color:#fff;
-  background:linear-gradient(120deg,#06172a,#0c2d4b 60%,#173e59);
+  background:
+    linear-gradient(rgba(6,23,42,.88),rgba(12,45,75,.92)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=85");
+  background-size:cover;
+  background-position:center;
   position:relative;
-  overflow:hidden;
-}
-
-.hero:after{
-  content:"";
-  position:absolute;
-  width:470px;
-  height:470px;
-  border:1px solid #d6aa4f44;
-  right:-170px;
-  top:120px;
-  transform:rotate(45deg);
-  box-shadow:
-    0 0 0 80px #d6aa4f08,
-    0 0 0 160px #d6aa4f04;
 }
 
 .hero .wrap{
@@ -150,7 +146,6 @@ nav a:hover{
   line-height:1.02;
   letter-spacing:-3px;
   max-width:800px;
-  margin:0;
 }
 
 .gold{
@@ -159,7 +154,7 @@ nav a:hover{
 
 .hero p{
   max-width:630px;
-  color:#c6d1dc;
+  color:#d0d9e2;
   font-size:17px;
   margin:24px 0 30px;
 }
@@ -185,7 +180,7 @@ nav a:hover{
 }
 
 .outline{
-  border-color:#fff5;
+  border-color:#fff;
   color:#fff;
 }
 
@@ -195,7 +190,7 @@ nav a:hover{
   flex-wrap:wrap;
   margin-top:65px;
   padding-top:18px;
-  border-top:1px solid #fff3;
+  border-top:1px solid rgba(255,255,255,.25);
 }
 
 .trust b,
@@ -227,7 +222,7 @@ nav a:hover{
   display:flex;
   gap:11px;
   align-items:center;
-  border-right:1px solid #06192d22;
+  border-right:1px solid rgba(6,25,45,.15);
 }
 
 .stat strong{
@@ -241,7 +236,7 @@ nav a:hover{
   line-height:1.25;
 }
 
-/* GENERAL */
+/* SECTIONS */
 section{
   padding:92px 0;
 }
@@ -259,8 +254,10 @@ h2{
   margin:0;
 }
 
-.about{
+.about p,
+.intro{
   color:#687685;
+  margin-bottom:18px;
 }
 
 .signature{
@@ -316,7 +313,7 @@ h2{
   padding:28px;
   min-height:230px;
   position:relative;
-  box-shadow:0 8px 25px #06192d08;
+  box-shadow:0 8px 25px rgba(6,25,45,.05);
 }
 
 .num{
@@ -334,7 +331,7 @@ h2{
 }
 
 .card h3{
-  margin:0 0 8px;
+  margin-bottom:8px;
 }
 
 .card p{
@@ -363,7 +360,7 @@ h2{
   overflow:hidden;
   min-height:260px;
   background:#1c3449;
-  border-radius:3px;
+  border-radius:2px;
 }
 
 .project.large{
@@ -377,7 +374,6 @@ h2{
   object-fit:cover;
   position:absolute;
   inset:0;
-  opacity:.75;
   transition:transform .5s ease;
 }
 
@@ -389,7 +385,7 @@ h2{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(transparent 35%,#000d);
+  background:linear-gradient(transparent 30%,rgba(0,0,0,.85));
 }
 
 .project .caption{
@@ -417,20 +413,15 @@ h2{
 
 .planvisual{
   min-height:410px;
-  background:#06192d;
+  background:
+    linear-gradient(rgba(6,25,45,.7),rgba(6,25,45,.85)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85");
+  background-size:cover;
+  background-position:center;
   display:grid;
   place-items:center;
   overflow:hidden;
   position:relative;
-}
-
-.planvisual:before{
-  content:"";
-  width:350px;
-  height:350px;
-  border:1px solid #d6aa4f55;
-  transform:rotate(45deg);
-  position:absolute;
 }
 
 .planbox{
@@ -439,6 +430,7 @@ h2{
   color:white;
   padding:30px;
   width:220px;
+  background:rgba(6,25,45,.75);
 }
 
 .planbox small{
@@ -487,6 +479,7 @@ h2{
 .quote p:not(.eyebrow){
   color:#abb7c4;
   max-width:480px;
+  margin:20px 0;
 }
 
 .contactmini a{
@@ -518,22 +511,28 @@ form{
 .field textarea{
   width:100%;
   margin-top:6px;
-  padding:11px;
+  padding:12px;
   border:1px solid #d7dde3;
   font:inherit;
   background:#fafbfc;
 }
 
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  outline:2px solid #d6aa4f;
+}
+
 .full{
   width:100%;
   border:0;
-  cursor:pointer;
 }
 
 .note{
   text-align:center;
   font-size:9px;
   color:#7d8995;
+  margin-top:10px!important;
 }
 
 /* CONTACT */
@@ -589,7 +588,7 @@ footer{
 }
 
 .copy{
-  border-top:1px solid #fff1;
+  border-top:1px solid rgba(255,255,255,.1);
   margin-top:28px;
   padding-top:14px;
   font-size:9px;
@@ -600,8 +599,8 @@ footer{
   position:fixed;
   right:18px;
   bottom:18px;
-  width:54px;
-  height:54px;
+  width:58px;
+  height:58px;
   border-radius:50%;
   background:#159447;
   color:#fff;
@@ -609,7 +608,7 @@ footer{
   place-items:center;
   font-weight:900;
   z-index:200;
-  box-shadow:0 8px 22px #0005;
+  box-shadow:0 8px 22px rgba(0,0,0,.35);
 }
 
 /* MOBILE */
@@ -697,6 +696,10 @@ footer{
 
   .contactbox{
     padding:28px 22px;
+  }
+
+  .statsgrid{
+    grid-template-columns:1fr 1fr;
   }
 }
 </style>
@@ -969,12 +972,11 @@ Project concept visuals are shown here. Your own Royal Construction project phot
 
 <div class="projectgrid">
 
-
 <div class="project large">
 
 <img
-src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
-alt="Modern construction project">
+src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85"
+alt="Modern residential construction">
 
 <div class="caption">
 <span>CONCEPT 01</span>
@@ -987,12 +989,12 @@ alt="Modern construction project">
 <div class="project">
 
 <img
-src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
-alt="Construction building project">
+src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85"
+alt="Construction project">
 
 <div class="caption">
 <span>CONCEPT 02</span>
-<b>Construction & Roofing</b>
+<b>Roofing & Finishing</b>
 </div>
 
 </div>
@@ -1001,8 +1003,8 @@ alt="Construction building project">
 <div class="project">
 
 <img
-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-alt="Interior finishing project">
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+alt="Interior finishing">
 
 <div class="caption">
 <span>CONCEPT 03</span>
@@ -1067,8 +1069,7 @@ Need a house plan before construction starts? Tell us your requirements and we c
 
 </ul>
 
-<a
-class="btn"
+<a class="btn"
 style="background:#06192d;color:#fff"
 href="#quote">
 Request a House Plan →
@@ -1077,7 +1078,6 @@ Request a House Plan →
 </div>
 
 </div>
-
 </section>
 
 
@@ -1098,7 +1098,7 @@ Let's build<br>
 </h2>
 
 <p>
-Tell us what you want to build, renovate or improve. We'll use your information to understand your project and get back to you.
+Tell us what you want to build, renovate or improve. Complete the form and your request will open directly in WhatsApp.
 </p>
 
 <div class="contactmini">
@@ -1124,8 +1124,8 @@ Internationalroyalconstruction@gmail.com
 Your name
 
 <input
-id="name"
 type="text"
+id="name"
 required
 placeholder="Full name">
 
@@ -1140,8 +1140,8 @@ placeholder="Full name">
 Phone / WhatsApp
 
 <input
-id="phone"
 type="tel"
+id="phone"
 required
 placeholder="+263...">
 
@@ -1155,8 +1155,9 @@ placeholder="+263...">
 <label>
 Service
 
-<select id="service">
+<select id="service" required>
 
+<option value="">Select a service</option>
 <option>Building Construction</option>
 <option>Plumbing</option>
 <option>Roofing</option>
@@ -1178,8 +1179,9 @@ Service
 Project location
 
 <input
-id="location"
 type="text"
+id="location"
+required
 placeholder="City / area">
 
 </label>
@@ -1218,7 +1220,6 @@ No payment is required to request a quote.
 </form>
 
 </div>
-
 </section>
 
 
@@ -1327,16 +1328,19 @@ Building with quality. Delivering with pride.
 </footer>
 
 
-<!-- WHATSAPP BUTTON -->
+<!-- FLOATING WHATSAPP -->
 <a
 class="wa"
 target="_blank"
+aria-label="WhatsApp Royal Construction International"
 href="https://wa.me/263714935110?text=Hello%20Royal%20Construction%20International%2C%20I%20would%20like%20to%20discuss%20a%20project.">
+
 WA
+
 </a>
 
 
-<!-- WHATSAPP QUOTE FORM -->
+<!-- WHATSAPP QUOTE SCRIPT -->
 <script>
 
 document.getElementById("quoteForm").addEventListener("submit", function(event){
@@ -1374,7 +1378,19 @@ const whatsappURL =
 encodeURIComponent(message);
 
 
-window.location.href = whatsappURL;
+window.open(whatsappURL, "_blank");
+
+});
+
+
+// MOBILE MENU
+document.querySelectorAll("nav a").forEach(function(link){
+
+link.addEventListener("click",function(){
+
+document.querySelector("nav").classList.remove("open");
+
+});
 
 });
 
